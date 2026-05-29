@@ -17,7 +17,7 @@ This pipeline uses [Open-Meteo](https://open-meteo.com/), a free and open-source
 ### 1. Clone the repo and install dependencies
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/dhansuhkumar/tacheon-assessment
 cd tacheon/task-2-pipeline
 pip install -r requirements.txt
 ```
