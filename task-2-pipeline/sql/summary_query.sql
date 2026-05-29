@@ -1,0 +1,2 @@
+-- summary_query.sql — analytical summary and data quality check
+-- Content coming in subsequent commits.
