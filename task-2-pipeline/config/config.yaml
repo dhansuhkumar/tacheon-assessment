@@ -16,7 +16,7 @@ api:
   timeout_seconds: 30
 
 bigquery:
-  project_id: "your-gcp-project-id"   # replace with your GCP project ID
+  project_id: "spry-kingdom-477407-p7"  
   dataset_id: "weather_pipeline"
   table_id: "mumbai_forecast"
 

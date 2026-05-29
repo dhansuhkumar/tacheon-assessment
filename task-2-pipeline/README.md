@@ -142,9 +142,8 @@ GROUP BY data_source;
 **Output after running the pipeline** *(paste actual BigQuery output here after your first run — replace this block):*
 
 ```
-forecast_start | forecast_end | total_days | avg_max_temp_c | peak_max_temp_c | avg_min_temp_c | avg_daily_temp_range_c | total_precipitation_mm | avg_max_windspeed_kmh | heat_risk_days | rainy_days | avg_comfort_index | data_source | last_pipeline_run_utc
----------------|--------------|------------|----------------|-----------------|----------------|------------------------|------------------------|-----------------------|----------------|------------|-------------------|-------------|----------------------
-[paste here]
+forecast_start	forecast_end	total_days	avg_max_temp_c	peak_max_temp_c	avg_min_temp_c	avg_daily_temp_range_c	total_precipitation_mm	avg_max_windspeed_kmh	heat_risk_days	rainy_days	avg_comfort_index	data_source	last_pipeline_run_utc
+2026-05-29	2026-06-04	7	33.1	34.2	28.9	4.2	12.5	14.8	0	4	73.1	open-meteo	2026-05-29 05:22:53.038689 UTC
 ```
 
 > **To complete this section:** Run `python src/pipeline.py`, then open the BigQuery console, run Query 1 from `sql/summary_query.sql` against your table, and paste the output above.
@@ -172,9 +171,8 @@ FROM `<project_id>.weather_pipeline.mumbai_forecast`;
 **Output after running the pipeline** *(paste here):*
 
 ```
-total_rows | distinct_dates | earliest_date | latest_date | null_temp_max | null_precipitation | missing_source_label | hours_since_last_load | freshness_status
------------|----------------|---------------|-------------|---------------|--------------------|----------------------|-----------------------|-----------------
-[paste here]
+total_rows	distinct_dates	earliest_date	latest_date	null_temp_max	null_precipitation	missing_source_label	hours_since_last_load	freshness_status
+7	7	2026-05-29	2026-06-04	0	0	0	0	FRESH
 ```
 
 ---
