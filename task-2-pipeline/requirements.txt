@@ -1,0 +1,8 @@
+# Runtime dependencies
+requests>=2.31.0
+pandas>=2.0.0
+google-cloud-bigquery>=3.11.0
+pyyaml>=6.0.1
+
+# Development and testing
+pytest>=7.4.0

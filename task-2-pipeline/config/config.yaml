@@ -1,2 +1,30 @@
-# config.yaml — pipeline configuration
-# Content coming in subsequent commits.
+# Pipeline configuration — edit this file before running the pipeline.
+# Do not hardcode any of these values in Python source files.
+
+api:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+  latitude: 19.0760          # Mumbai, Maharashtra, India
+  longitude: 72.8777
+  parameters:
+    - temperature_2m_max
+    - temperature_2m_min
+    - precipitation_sum
+    - windspeed_10m_max
+    - weathercode
+  forecast_days: 7
+  timezone: "Asia/Kolkata"
+  timeout_seconds: 30
+
+bigquery:
+  project_id: "your-gcp-project-id"   # replace with your GCP project ID
+  dataset_id: "weather_pipeline"
+  table_id: "mumbai_forecast"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+  datefmt: "%Y-%m-%d %H:%M:%S"
+
+pipeline:
+  max_retries: 3
+  retry_delay_seconds: 5
